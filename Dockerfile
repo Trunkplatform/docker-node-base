@@ -8,5 +8,6 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
-RUN wget -O - http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz | tar zxf -
-RUN npm install bower gulp -g --production && npm cache clean
+RUN wget --quiet -O - http://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-x64.tar.gz | tar zxf -
+RUN npm install bower gulp -g --production && \
+    npm cache clean
