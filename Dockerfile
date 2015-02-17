@@ -1,5 +1,5 @@
 FROM debian:wheezy
-ENV NODE_VERSION 0.10.36
+ENV NODE_VERSION 0.12.0
 
 ENV PATH /opt/node-v$NODE_VERSION-linux-x64/bin:$PATH
 
