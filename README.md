@@ -1,18 +1,14 @@
 [![Docker Repository on Quay.io](https://quay.io/repository/trunk/docker-node-base/status "Docker Repository on Quay.io")](https://quay.io/repository/trunk/docker-node-base)
 
 # Base docker image for node apps
-Designed to be very lightweight to reduce image size
-contains:
-- system packages: git, openssh, wget, bzip2, curl
-- node
+Designed to be very lightweight using the alphine-harp base image.
+- harp 0.17.0
+- git
+- node 0.12
 - gulp
 - bower
 
-As of node 0.12.0, the following dependencies are also added:
-- python
-- build-essential
-
-# build it locally 
+# build it locally
 ```
-docker build -t trunk-node-base .
+docker build -t trunk/node-base .
 ```
