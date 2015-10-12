@@ -2,11 +2,11 @@
 
 # Base docker image for node apps
 Designed to be very lightweight using the alphine-harp base image.
-- harp 0.17.0
 - git
 - node 0.12
 - gulp
 - bower
+- nginx
 
 # build it locally
 ```
