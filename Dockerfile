@@ -10,9 +10,9 @@ RUN apk --update add git nginx python && \
     rm -f /etc/nginx/conf.d/default.conf
 
 ADD nginx.conf /etc/nginx/nginx.conf
-ADD nodejs.conf /etc/nginx/conf.d/nginx.conf
+ADD nodejs.conf /etc/nginx/conf.d/nodejs.conf
 
 WORKDIR /opt
-RUN npm install -g npm
-RUN npm install -g --production bower gulp  && \
-  npm cache clean
+RUN npm install -g npm && \
+    npm install -g --production bower gulp  && \
+    npm cache clean
