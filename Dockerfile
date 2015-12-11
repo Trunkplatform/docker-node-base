@@ -1,4 +1,4 @@
-FROM ficusio/nodejs-base:0.12
+FROM quay.io/trunk/alpine-node-kubernetes:5.1.1
 MAINTAINER nagliyvred, yunspace
 
 RUN apk --update add git nginx python && \
@@ -9,10 +9,8 @@ RUN apk --update add git nginx python && \
     \
     rm -f /etc/nginx/conf.d/default.conf
 
-ADD nginx.conf /etc/nginx/nginx.conf
-ADD nodejs.conf /etc/nginx/conf.d/nodejs.conf
+COPY rootfs /
 
 WORKDIR /opt
-RUN npm install -g npm && \
-    npm install -g --production bower gulp  && \
-    npm cache clean
+#RUN npm install -g --production bower gulp  && \
+#    npm cache clean
