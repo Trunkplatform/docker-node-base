@@ -12,5 +12,3 @@ RUN apk --update add git nginx python && \
 COPY rootfs /
 
 WORKDIR /opt
-#RUN npm install -g --production bower gulp  && \
-#    npm cache clean
