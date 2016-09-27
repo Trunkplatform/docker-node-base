@@ -7,7 +7,8 @@ RUN apk --update add git nginx python && \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
     ln -sf /dev/stderr /var/log/nginx/error.log && \
     \
-    rm -f /etc/nginx/conf.d/default.conf
+    rm -f /etc/nginx/conf.d/default.conf && \
+    python -m ensurepip && pip install daemon-runner
 
 COPY rootfs /
 
