@@ -1,4 +1,4 @@
-FROM quay.io/trunk/alpine-node-kubernetes:8.9.0
+FROM quay.io/trunk/alpine-node-kubernetes:8.9.4
 MAINTAINER nagliyvred, yunspace
 
 RUN apk --update add git nginx python && \
